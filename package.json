@@ -1,0 +1,17 @@
+```json
+{
+"name": "crypto-safebrowse",
+"version": "0.1.0",
+"private": true,
+"type": "module",
+"scripts": {
+"dev": "vite --mode development",
+"build": "vite build",
+"zip": "node -e \"const fs=require('fs');const arch=require('archiver');const a=arch('zip');const out=fs.createWriteStream('crypto-safebrowse.zip');a.pipe(out);a.directory('dist/', false);a.finalize();\""
+},
+"devDependencies": {
+"typescript": "^5.6.3",
+"vite": "^5.4.10"
+}
+}
+```
